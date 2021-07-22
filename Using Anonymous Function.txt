@@ -1,0 +1,170 @@
+Using Anonymous Function:
+
+Do the below Program in anonymous function:
+1.Print odd number in an array.
+2.Convert all the strings to title caps in a string array.
+3.Sum of all numbers in an array.
+4.Return all the prime numbers in an array.
+5.Return all the palindromes in an array.
+6.Return median of two sorted arrays of same size.
+7.Remove duplicates from an array.
+8.Rotate an array by k times and return the rotated array.
+
+1.Print odd number in an array.
+
+Answer:
+
+const arr = [1,2,3,4,5,6,7,8,9,10];
+
+const odd = function (values)
+{
+   return  values % 2 ;
+}
+console.log(arr.filter(odd));
+
+2.Convert all the strings to title caps in a string array.
+
+Answer:
+var array =["good morning"]
+var titleCase = function (str) {
+  return str.toLowerCase().split(' ').map(function(word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}
+console.log(array.map(titleCase));
+
+
+
+(or)
+
+
+var array = ["hello","guvi","hai","sangeetha"];
+
+ var titleCase = function (str){
+     
+    return str.toLowerCase().split(' ').map(function(word){
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+}
+console.log(array.map(titleCase));
+
+
+3.Sum of all numbers in an array.
+
+Answer:
+var arr =[10,10,10];
+var res = 0;
+var sum = function()
+{
+    for(var i=0;i<arr.length;i++)
+    {
+        res += parseInt(arr[i]);
+        
+    }
+    console.log(res);
+}
+sum();
+
+(or)
+
+   const arr = [10,10,10];
+   const add = function(total,num)
+    {
+        return total + num;
+    }
+    console.log(arr.reduce(add,0));
+
+
+4.Return all the prime numbers in an array.
+
+Answer:
+
+  var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var prime = function(number)
+  {
+    for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+  }
+ console.log(numArray.filter(prime));
+
+
+5.Return all the palindromes in an array.
+Answer:
+
+
+var array_words =["hello","madam","did","this","refer","mom","dad"];
+ //function that checks if palindrome or not
+var checkPalindrom = function (str) 
+{
+    return str == str.split('').reverse().join('');
+}
+ //filter function that filters array to only keep palindromes
+const result = array_words.filter(checkPalindrom);
+console.log(result);
+
+
+6.Return median of two sorted arrays of same size.
+Answer:
+let a = ["Saturday","Monday","Tuesday"];
+let b = ["Wednesday","Thursday","Friday"];
+
+var box =[];
+
+var mediansort = function(x,y)
+{
+    if(x.length === y.length)
+    {
+        x=x.sort();
+        y=y.sort();
+        var arr = x.concat(y);
+        let median = arr[(arr.length/2)-1]+ ", " +arr[((arr.length/2))];
+        box.push(median)
+    }else{
+        console.log("invalid input");
+    }
+    return box;
+}
+console.log(mediansort(a,b));
+
+
+7.Remove duplicates from an array.
+Answer:
+
+let Arrays = [ "sangeetha", 1, 5, 1, "sangeetha", "guvi", "Hello","guvi" ];
+
+let findDuplicates = function(array)
+{
+    let removeDuplicates = new Set(array);
+    let uniqueArray = [ ...removeDuplicates ];
+    return uniqueArray;
+}
+// result => ["sangeetha", 1, 5, "guvi", "Hello"]
+console.log("Original Array values:",Arrays);
+console.log("Duplicates Array values:",findDuplicates(Arrays));
+
+8.Rotate an array by k times and return the rotated array.
+Answer:
+var array = [1,2,3,4,5];
+var rotate_fun = function(x , k)
+{
+for (var i=0; i<k; i++)
+{
+x.unshift(x.pop())
+}
+return x;
+
+}
+console.log(rotate_fun(array,1));
+
+
+
+
+
+
+
+
+
+
+
