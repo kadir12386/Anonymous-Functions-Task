@@ -9,7 +9,7 @@ Do the below Program in anonymous function:
 6.Return median of two sorted arrays of same size.
 7.Remove duplicates from an array.
 8.Rotate an array by k times and return the rotated array.
-
+ 
 1.Print odd number in an array.
 
 Answer:
